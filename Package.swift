@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "UITextField-Shake",
+    platforms: [.iOS(.v14)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -21,7 +22,7 @@ let package = Package(
         .target(
             name: "UITextField-Shake",
             path: "Sources/UITextField-Shake",
-            publicHeadersPath: "",
+            publicHeadersPath: "include",
             cSettings: [
               .headerSearchPath("include"),
             ]),
